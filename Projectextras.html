@@ -1,0 +1,116 @@
+<HTML>
+    <HEAD>
+        <STYLE>
+            div.frontpage {     /*this makes a border that goes the full width of the page*/
+                width: 100%;  
+                border: 1px solid gray;
+            }
+
+            header {
+                padding: 1em; /*adjusts the height of the header and footer*/
+                color: white;  /*font = white*/
+                background-color: #660022;  /*backdrop fill = dark grey*/
+                clear: left;
+                text-align: center;
+            }
+            
+            footer {
+                padding: 1em; /*adjusts the height of the header and footer*/
+                color: white;  /*font = white*/
+                background-color: #660022;  /*backdrop fill = dark grey*/ 
+                clear: left;
+                text-align: left;
+            }            
+                        
+            nav {
+                float: left;
+                max-width: 160px;
+                margin: 0;
+                padding: 1em;
+            }
+
+            nav ul {
+                list-style-type: none;
+                padding: 1em;
+                text-align: left;
+                text-indent: 3px;
+                line-height: 2
+            }   
+            
+            
+            nav ul a {
+                text-decoration: none; /*no underline or overline*/
+                color: black;
+                font-size: 20
+            }
+            
+            
+            nav ul a:hover {
+                text-decoration: none; 
+                text-decoration-color: black;
+                color: black;
+                background-color: lightgrey;
+                font-size: 20
+            }
+            
+            
+            nav ul a.active {
+                text-decoration: underline;
+                text-decoration-color: darkred;
+                color: darkred;
+                font-size: 20;
+                font-weight: bold
+            }
+
+            article {
+                margin-left: 250px;
+                border-left: 2px double black;  /*border width, solid or dashed*/
+                padding: 1em;
+                overflow:  hidden;
+                font-size: 18;
+            }
+        </STYLE>
+    </HEAD>
+    
+    <BODY>
+
+        <div class="frontpage">
+    
+            <header>
+                <h1>Natalie Rose: My Portfolio</h1>
+            </header>
+        
+            <nav>
+                <ul>
+                    <li><a href='https://natalierose2.github.io'>About Me</a></li>
+                    <li><a href='https://natalierose2.github.io/ABMproject.html'>ABM Project</a></li>
+                    <li><a class='active' href='#'>Project Extras</a></li>
+
+                </ul>
+            </nav>
+
+            <article>
+                <h1>Project Extras</h1>
+                <h3>Distance calculation and timing functions</h3>
+                <p>As an addition to the main model, timing functions were used to test how long various calculations took as the number of iterations increased. In this instance, the time taken to calculate all the distances between agents was measured as the number of iterations increased by magnitude 10. After the run times had been calculated, they were plotted against a logarithmic scale of iterations so that the relationship between the two variables could be seen.</p>
+                <p>Functions to calculate the minimum and maximum distances between agents were also added, ensuring that agents were not being compared against themselves.</p>
+                <h4>Links</h4>
+                <p>The code to run these functions and view the results can be found <a href='timingfunction.py.zip'>here</a></p>
+                <br>
+                <h3>Adding a secondary agent</h3>
+                <p>To add to the complexity of the final model, wolves were added as secondary agents that the sheep can also interact with. The wolves all start in the bottom right corner of the environment, symbolising the wolves 'den', and although they have the same movement function built in, the wolves are programmed to move faster than the sheep across the environment.</p> 
+                <p>Another function that has been programmed for the wolves means that if they come into close proximity to one of the sheep agents, there is a 50% chance that the wolf will eat the sheep and 50% chance that the sheep will escape and avoid this fate. If the sheep is eaten, the wolf's food store increases and the sheep agent is deleted from the map. As with the sheep, if the wolf's store becomes too large, the wolf is sick and delivers its store back to the environment.</p>
+                <p>The output for this model is a map of the resultant agents and environment after a set number of iterations of model runs.</p>
+                <h4>Links</h4>
+                <p>The data needed to run this model can be found <a href='in.txt.zip'>here</a></p>
+                <p>The code for the secondary agents model and agent framework can be found <a href='model_with_wolves.py.zip'>here</a> and <a href='agentframeworkwolves.py.zip'>here</a></p>
+
+            </article>
+
+            <footer>Copyright &copy Natalie Rose, 2017*</footer>
+
+        
+        </div>
+    
+    </BODY>
+</HTML>
